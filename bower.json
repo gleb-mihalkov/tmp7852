@@ -1,0 +1,19 @@
+{
+  "name": "temporary-project",
+  "description": "Temporary repo.",
+  "main": "gulpfile.js",
+  "authors": [
+    "gleb-mihalkov"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "https://github.com/gleb-mihalkov/tmp7852#readme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./libs",
+    "test",
+    "tests"
+  ]
+}
