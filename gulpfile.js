@@ -11,7 +11,7 @@ var prefixer = require("gulp-autoprefixer");
 var changed = require("gulp-changed");
 var path = require("path");
 
-var flsPath = ["./src/**/*", "!./src/_*/**", "!./src/_*"];
+var flsPath = ["./**/*", "!./_*/**", "!./_*"];
 var dstPath = "/home/gleb-mihalkov/htdocs/homemaker/templates/main";
 var srcPath = "./src";
 

@@ -11,7 +11,9 @@
 </head>
 <body class="global">
   <div class="page">
-    <div class="page__header"></div>
+    <div class="page__header | page-header">
+      <a href="#" class="page-header__item .page-header__item--brand"></a>
+    </div>
     <div class="page__nav"></div>
     <div class="page__slider"></div>
     <div class="page__main"></div>
