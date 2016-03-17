@@ -109,7 +109,7 @@ function _bem() {
 process.on("uncaughtException", _error());
 
 gulp.task("build:css", function(cb) {
-  _src("./_main.sass", cb)
+  _src("./main.sass", cb)
     .pipe(sass())
     .pipe(prefixer())
     .pipe(rename("styles.css"))
@@ -117,7 +117,7 @@ gulp.task("build:css", function(cb) {
 });
 
 gulp.task("build:js", function(cb) {
-  _src("./_main.js", cb)
+  _src("./main.js", cb)
     .pipe(include())
     .pipe(rename("scripts.js"))
     .pipe(_dst(cb));
