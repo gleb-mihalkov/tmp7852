@@ -1,0 +1,24 @@
+.page-header-cart
+  
+  $content__height: $text__size--small + $text__size--xmedium + $size__xsmall * 0.5
+  @debug $content__height
+  $icon__height: 50px
+  $icon__width: 35px
+
+  padding-top: ($icon__height - $content__height) / 2
+  padding-left: $icon__width + $size__small
+  background-image: url(./img/cart.png)
+  background-position: left center
+  background-repeat: no-repeat
+  height: $icon__height
+  font-size: $text__size--xmedium
+  color: $color__pink
+  line-height: 1
+
+  &:before
+    margin-bottom: $size__xsmall * 0.5
+    display: block
+    width: 100%
+    font-size: $text__size--small
+    color: $color__black
+    content: "В корзине:"
