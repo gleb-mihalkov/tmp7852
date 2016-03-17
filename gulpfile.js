@@ -9,6 +9,7 @@ var watch = require("gulp-watch");
 var replace = require("gulp-replace");
 var prefixer = require("gulp-autoprefixer");
 var changed = require("gulp-changed");
+var path = require("path");
 
 var flsPath = ["./src/**/*", "!./src/_*/**", "!./src/_*"];
 var dstPath = "/home/gleb-mihalkov/htdocs/homemaker/templates/main";
@@ -31,10 +32,23 @@ function _error(cb) {
   }
 }
 
-function _src(file, cb) {
-  var path = file;
-  if (typeof file == "string") path = srcPath + "/" + file;
-  var s1 = gulp.src(path);
+function _glob(glob, base) {
+  var isFile = typeof glob == "string";
+  if (isFile) glob = [glob];
+  for (var i = 0; i < glob.length; i += 1) {
+    var isIgnore = glob[i][0] == "!";
+    var value = isIgnore ? glob[i].substr(1) : glob[i];
+    var file = path.resolve(base, value);
+    if (isIgnore) file = "!" + file;
+    glob[i] = file;
+  }
+  if (glob.length == 0) return [];
+  return isFile ? glob[0] : glob;
+}
+
+function _src(glob, cb) {
+  var files = _glob(glob, srcPath);
+  var s1 = gulp.src(files);
   var s2 = plumber({errorHandler: _error(cb)});
   s1.pipe(s2);
   return s2;
@@ -47,8 +61,7 @@ function _dst(cb) {
 }
 
 function _watch(glob, task) {
-  var files = glob;
-  if (typeof glob == "string") files = srcPath + "/" + glob;
+  var files = _glob(glob, srcPath);
   watch(files, function() { gulp.start(task); });
 }
 
@@ -98,7 +111,6 @@ process.on("uncaughtException", _error());
 gulp.task("build:css", function(cb) {
   _src("./_main.sass", cb)
     .pipe(sass())
-    .pipe(include())
     .pipe(prefixer())
     .pipe(rename("styles.css"))
     .pipe(_dst(cb));

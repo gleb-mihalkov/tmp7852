@@ -9,7 +9,14 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="<?= $template; ?>/styles.css">
 </head>
-<body>
+<body class="global">
+  <div class="page">
+    <div class="page__header"></div>
+    <div class="page__nav"></div>
+    <div class="page__slider"></div>
+    <div class="page__main"></div>
+    <div class="page__footer"></div>
+  </div>
 	<script src="<?= $template; ?>/scripts.js"></script>
 </body>
 </html>
