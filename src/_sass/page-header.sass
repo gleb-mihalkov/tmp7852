@@ -1,31 +1,9 @@
 .page-header
-  font-weight: 600
-  
-  $content__width: 208px + 165px * 2 + 260px + 175px
-  $contacts__offset: $size__global - $content__width - $size__xsmall * 2
-  $contacts__offset: $contacts__offset / 3
+
+  height: $page-header__height
+  display: flex
+  justify-content: space-between
+  align-items: center
 
   &__item
-    max-height: $header__height
-    display: block
-    float: left
-
-    &--brand
-      padding-top: ($header__height - $brand__height) / 2
-      padding-right: $contacts__offset
-
-    &--contacts
-      padding-top: ($header__height - $page-header-contacts__height) / 2
-
-      & + &
-        padding-left: $contacts__offset
-
-    &--cart
-      padding-top: ($header__height - $page-header-cart__height) / 2
-      padding-left: $size__medium
-
-    &--search
-      padding-top: ($header__height - $page-header-search__height) / 2
-
-    &--right
-      float: right
+    min-width: 200px

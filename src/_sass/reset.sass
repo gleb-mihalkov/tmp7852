@@ -25,14 +25,18 @@ a
     border-bottom: 1px solid $color__pink
 
 input
+
+  display: block
   height: $input__height
   width: 100%
-  display: block
+
   padding: #{$input__offset} #{$input__offset * 2}
+  
+  font-family: inherit
   font-size: $text__size--small
   font-weight: normal
   line-height: 1.25
-  font-family: inherit
-  box-shadow: inset 0 0 6px 0 fade-out($color__pink, 0.8)
+  
   border: 1px solid fade-out($color__pink, 0.5)
+  box-shadow: inset 0 0 6px 0 fade-out($color__pink, 0.8)
   border-radius: 6px
