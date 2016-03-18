@@ -42,6 +42,7 @@
         <a href="#" class="page-header-cart">199050 руб.</a>
       </div>
     </div>
+    <div class="page__menu"></div>
   </div>
 	<script src="<?= $template; ?>/scripts.js"></script>
 </body>
