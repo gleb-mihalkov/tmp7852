@@ -42,7 +42,34 @@
         <a href="#" class="page-header-cart">199050 руб.</a>
       </div>
     </div>
-    <div class="page__menu"></div>
+    <div class="page__top-menu">
+      <ul class="top-menu">
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">Главная</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">Каталог</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">Прайс-лист</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">Акции</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">Доставка и оплата</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">О компании</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">Новости</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__title">Контакты</a>
+        </li>
+      </ul>
+    </div>
   </div>
 	<script src="<?= $template; ?>/scripts.js"></script>
 </body>
