@@ -18,12 +18,7 @@
 	$baseurl = $this->baseurl;
 	$template = "$baseurl/templates/{$this->template}";
 
-	$doc->_script = array();
 	$doc->_scripts = array();
+	$doc->_script = array();
 
 	$isMain = $menu->getActive() == $menu->getDefault();
-	
-	$isAfterContent1 = $this->countModules("after-content-1");
-	$isAfterContent2 = $this->countModules("after-content-2");
-	$isAfterContent3 = $this->countModules("after-content-3");
-	$isBeforeContent1 = $this->countModules("before-content-1");
