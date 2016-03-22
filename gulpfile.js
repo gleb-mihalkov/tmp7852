@@ -9,10 +9,16 @@ var watch = require("gulp-watch");
 var replace = require("gulp-replace");
 var prefixer = require("gulp-autoprefixer");
 var changed = require("gulp-changed");
+var sftp = require('gulp-sftp');
 var path = require("path");
 
 var flsPath = ["./**/*", "!./_*/**", "!./_*", "!./main.*"];
-var dstPath = "/home/gleb-mihalkov/remote/aspired/www/aspired.ru/_homemaker/templates/main";
+var dstPath = {
+  host: "sbx21.hosting.reg.ru",
+  user: "u0127910",
+  pass: "j0zjf4E_",
+  remotePath: "/var/www/u0127910/data/www/aspired.ru/_homemaker/gleb-mihalkov.dev/templates/main"
+};
 var srcPath = "./src";
 
 var errorRenderer = null;
@@ -55,7 +61,7 @@ function _src(glob, cb) {
 }
 
 function _dst(cb) {
-  var sTarget = gulp.dest(dstPath);
+  var sTarget = sftp(dstPath);
   if (cb != null) sTarget.on("end", cb);
   return sTarget;
 }
@@ -125,7 +131,6 @@ gulp.task("build:js", function(cb) {
 
 gulp.task("build:assets", function(cb) {
   _src(flsPath)
-    .pipe(changed(dstPath))
     .pipe(_dst(cb));
 });
 
