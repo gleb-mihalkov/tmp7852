@@ -1,2 +1,4 @@
 node_modules/
 libs/
+/gulpfile.js
+/.gitignore

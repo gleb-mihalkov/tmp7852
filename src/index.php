@@ -44,11 +44,39 @@
     </div>
     <div class="page__top-menu">
       <ul class="top-menu">
+
         <li class="top-menu__item">
           <a href="#" class="top-menu__title">Главная</a>
         </li>
+
         <li class="top-menu__item">
           <a href="#" class="top-menu__title">Каталог</a>
+          <ul class="top-menu__submenu">
+
+            <li class="top-menu__sub-item">
+              <p class="top-menu__sub-title">Одежда из трикотажа</p>
+              <ul class="top-menu__sub-ul">
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+              </ul>
+              <ul class="top-menu__sub-ul">
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+              </ul>
+            </li>
+            <li class="top-menu__sub-item">
+              <p class="top-menu__sub-title">Медицинская одежда, униформа</p>
+              <ul class="top-menu__sub-ul">
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+                <li class="top-menu__sub-li"><a href=#>Sudmenu 1</a></li>
+              </ul>
+            </li>
+
+          </ul>
         </li>
         <li class="top-menu__item">
           <a href="#" class="top-menu__title">Прайс-лист</a>
