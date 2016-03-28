@@ -18,5 +18,6 @@
     <filename>templateDetails.xml</filename>
 	</files>
 	<positions>
+        <position>top-menu</position>
 	</positions>
 </extension>
